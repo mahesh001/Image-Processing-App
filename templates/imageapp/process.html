@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Image Processing App</title>
+
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'styles/smart_wizard.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'styles/demo_style.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'styles/bootstrap.css' %}" />
+
+<script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.smartWizard.js' %}"></script>
+</head>
+<div class="demoHead">   
+  <div>
+    <div style="float:left;">
+      <h1>Image Processing App</h1>
+      <h2>A cloud Based app for image processing</h2>
+    </div>
+    <div style="clear:both;"></div>
+  </div>
+</div>
+<form method="get" action="/imageapp"  style="float:right;background: #ffff00; color: #000">
+    <button type="submit" align="center" style="float:right;background: #ffff00; color: #000">Home</button>
+</form>
+<table align="center" border="0" cellpadding="0" cellspacing="0">
+<tr><td> 
+<center>
+<h4> Image has been successfully applied.</h4>
+</center>
+<br>
+<img src= '/media/output/{{outputfilename}}' width='1200px'>
+</td>
+</tr>
+</table>
+
+</html>
